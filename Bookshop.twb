@@ -1,0 +1,690 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20231.23.0310.1044                               -->
+<workbook original-version='18.1' source-build='2023.1.0 (20231.23.0310.1044)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='Book+ (Multiple Connections)' inline='true' name='federated.1orseio0nzx15v187pl1v0j5vish' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Bookshop' name='excel-direct.0jew2hq1ew5t2s14qhbw20sxk9fw'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='/Users/miteshramteke/Downloads/Bookshop.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.0jew2hq1ew5t2s14qhbw20sxk9fw' name='Award' table='[Award$]' type='table'>
+          <columns gridOrigin='A1:C19:no:A1:C19:0' header='yes' outcome='6'>
+            <column datatype='string' name='Title' ordinal='0' />
+            <column datatype='string' name='Award Name' ordinal='1' />
+            <column datatype='integer' name='Year Won' ordinal='2' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='excel-direct.0jew2hq1ew5t2s14qhbw20sxk9fw' name='Award' table='[Award$]' type='table'>
+            <columns gridOrigin='A1:C19:no:A1:C19:0' header='yes' outcome='6'>
+              <column datatype='string' name='Title' ordinal='0' />
+              <column datatype='string' name='Award Name' ordinal='1' />
+              <column datatype='integer' name='Year Won' ordinal='2' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.0jew2hq1ew5t2s14qhbw20sxk9fw' name='Book' table='[Book$]' type='table'>
+            <columns gridOrigin='A1:C59:no:A1:C59:0' header='yes' outcome='2'>
+              <column datatype='string' name='BookID' ordinal='0' />
+              <column datatype='string' name='Title' ordinal='1' />
+              <column datatype='string' name='AuthID' ordinal='2' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.0jew2hq1ew5t2s14qhbw20sxk9fw' name='Checkouts' table='[Checkouts$]' type='table'>
+            <columns gridOrigin='A1:C669:no:A1:C669:0' header='yes' outcome='6'>
+              <column datatype='string' name='BookID' ordinal='0' />
+              <column datatype='integer' name='CheckoutMonth' ordinal='1' />
+              <column datatype='integer' name='Number of Checkouts' ordinal='2' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[AuthID]' value='[Book].[AuthID]' />
+          <map key='[Award Name]' value='[Award].[Award Name]' />
+          <map key='[BookID (Checkouts)]' value='[Checkouts].[BookID]' />
+          <map key='[BookID]' value='[Book].[BookID]' />
+          <map key='[CheckoutMonth]' value='[Checkouts].[CheckoutMonth]' />
+          <map key='[Number of Checkouts]' value='[Checkouts].[Number of Checkouts]' />
+          <map key='[Title (Book)]' value='[Book].[Title]' />
+          <map key='[Title]' value='[Award].[Title]' />
+          <map key='[Year Won]' value='[Award].[Year Won]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Award]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C19:no:A1:C19:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Book]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C59:no:A1:C59:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Checkouts]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C669:no:A1:C669:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Title</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Title]</local-name>
+            <parent-name>[Award]</parent-name>
+            <remote-alias>Title</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Award_D2297C1DE9CC416198D06A4A24FB3E90]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Award Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Award Name]</local-name>
+            <parent-name>[Award]</parent-name>
+            <remote-alias>Award Name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Award_D2297C1DE9CC416198D06A4A24FB3E90]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year Won</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year Won]</local-name>
+            <parent-name>[Award]</parent-name>
+            <remote-alias>Year Won</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Award_D2297C1DE9CC416198D06A4A24FB3E90]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BookID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[BookID]</local-name>
+            <parent-name>[Book]</parent-name>
+            <remote-alias>BookID</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Book_79692CCF53464AC6BF1336A923B92168]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Title</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Title (Book)]</local-name>
+            <parent-name>[Book]</parent-name>
+            <remote-alias>Title</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Book_79692CCF53464AC6BF1336A923B92168]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AuthID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[AuthID]</local-name>
+            <parent-name>[Book]</parent-name>
+            <remote-alias>AuthID</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Book_79692CCF53464AC6BF1336A923B92168]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BookID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[BookID (Checkouts)]</local-name>
+            <parent-name>[Checkouts]</parent-name>
+            <remote-alias>BookID</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Checkouts_AADC73832CA2424595AF10078DFDE240]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CheckoutMonth</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[CheckoutMonth]</local-name>
+            <parent-name>[Checkouts]</parent-name>
+            <remote-alias>CheckoutMonth</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Checkouts_AADC73832CA2424595AF10078DFDE240]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Number of Checkouts</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Number of Checkouts]</local-name>
+            <parent-name>[Checkouts]</parent-name>
+            <remote-alias>Number of Checkouts</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Checkouts_AADC73832CA2424595AF10078DFDE240]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Auth ID' datatype='string' name='[AuthID]' role='dimension' type='nominal' />
+      <column caption='Book ID' datatype='string' name='[BookID]' role='dimension' type='nominal' />
+      <column caption='Checkout Month' datatype='integer' name='[CheckoutMonth]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[Year Won]' role='dimension' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Award' datatype='table' name='[__tableau_internal_object_id__].[Award_D2297C1DE9CC416198D06A4A24FB3E90]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Book' datatype='table' name='[__tableau_internal_object_id__].[Book_79692CCF53464AC6BF1336A923B92168]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Checkouts' datatype='table' name='[__tableau_internal_object_id__].[Checkouts_AADC73832CA2424595AF10078DFDE240]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Award' id='Award_D2297C1DE9CC416198D06A4A24FB3E90'>
+            <properties context=''>
+              <relation connection='excel-direct.0jew2hq1ew5t2s14qhbw20sxk9fw' name='Award' table='[Award$]' type='table'>
+                <columns gridOrigin='A1:C19:no:A1:C19:0' header='yes' outcome='6'>
+                  <column datatype='string' name='Title' ordinal='0' />
+                  <column datatype='string' name='Award Name' ordinal='1' />
+                  <column datatype='integer' name='Year Won' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='Book' id='Book_79692CCF53464AC6BF1336A923B92168'>
+            <properties context=''>
+              <relation connection='excel-direct.0jew2hq1ew5t2s14qhbw20sxk9fw' name='Book' table='[Book$]' type='table'>
+                <columns gridOrigin='A1:C59:no:A1:C59:0' header='yes' outcome='2'>
+                  <column datatype='string' name='BookID' ordinal='0' />
+                  <column datatype='string' name='Title' ordinal='1' />
+                  <column datatype='string' name='AuthID' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='Checkouts' id='Checkouts_AADC73832CA2424595AF10078DFDE240'>
+            <properties context=''>
+              <relation connection='excel-direct.0jew2hq1ew5t2s14qhbw20sxk9fw' name='Checkouts' table='[Checkouts$]' type='table'>
+                <columns gridOrigin='A1:C669:no:A1:C669:0' header='yes' outcome='6'>
+                  <column datatype='string' name='BookID' ordinal='0' />
+                  <column datatype='integer' name='CheckoutMonth' ordinal='1' />
+                  <column datatype='integer' name='Number of Checkouts' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[Title]' />
+              <expression op='[Title (Book)]' />
+            </expression>
+            <first-end-point object-id='Award_D2297C1DE9CC416198D06A4A24FB3E90' />
+            <second-end-point object-id='Book_79692CCF53464AC6BF1336A923B92168' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[BookID]' />
+              <expression op='[BookID (Checkouts)]' />
+            </expression>
+            <first-end-point object-id='Book_79692CCF53464AC6BF1336A923B92168' />
+            <second-end-point object-id='Checkouts_AADC73832CA2424595AF10078DFDE240' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='Catalog+ (BookshopLibraries)' inline='true' name='federated.1o3iw3i02zi9po19ntscf0c2hkc1' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='BookshopLibraries' name='excel-direct.133gikm07i6blb1caxsmz17yud87'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='/Users/miteshramteke/Downloads/BookshopLibraries.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.133gikm07i6blb1caxsmz17yud87' name='Catalog' table='[Catalog$]' type='table'>
+          <columns gridOrigin='A1:D292:no:A1:D292:0' header='yes' outcome='6'>
+            <column datatype='string' name='Loan ID' ordinal='0' />
+            <column datatype='string' name='ISBN' ordinal='1' />
+            <column datatype='string' name='Library ID' ordinal='2' />
+            <column datatype='integer' name='Number of Copies' ordinal='3' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='excel-direct.133gikm07i6blb1caxsmz17yud87' name='Catalog' table='[Catalog$]' type='table'>
+            <columns gridOrigin='A1:D292:no:A1:D292:0' header='yes' outcome='6'>
+              <column datatype='string' name='Loan ID' ordinal='0' />
+              <column datatype='string' name='ISBN' ordinal='1' />
+              <column datatype='string' name='Library ID' ordinal='2' />
+              <column datatype='integer' name='Number of Copies' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.133gikm07i6blb1caxsmz17yud87' name='LibraryProfile' table='[LibraryProfile$]' type='table'>
+            <columns gridOrigin='A1:F19:no:A1:F19:0' header='yes' outcome='6'>
+              <column datatype='string' name='Staff Type' ordinal='0' />
+              <column datatype='integer' name='Number of Staff' ordinal='1' />
+              <column datatype='string' name='Library' ordinal='2' />
+              <column datatype='string' name='Library ID' ordinal='3' />
+              <column datatype='string' name='Consortium Member' ordinal='4' />
+              <column datatype='string' name='Private' ordinal='5' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[Consortium Member]' value='[LibraryProfile].[Consortium Member]' />
+          <map key='[ISBN]' value='[Catalog].[ISBN]' />
+          <map key='[Library ID (LibraryProfile)]' value='[LibraryProfile].[Library ID]' />
+          <map key='[Library ID]' value='[Catalog].[Library ID]' />
+          <map key='[Library]' value='[LibraryProfile].[Library]' />
+          <map key='[Loan ID]' value='[Catalog].[Loan ID]' />
+          <map key='[Number of Copies]' value='[Catalog].[Number of Copies]' />
+          <map key='[Number of Staff]' value='[LibraryProfile].[Number of Staff]' />
+          <map key='[Private]' value='[LibraryProfile].[Private]' />
+          <map key='[Staff Type]' value='[LibraryProfile].[Staff Type]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Catalog]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:D292:no:A1:D292:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[LibraryProfile]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:F19:no:A1:F19:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Loan ID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Loan ID]</local-name>
+            <parent-name>[Catalog]</parent-name>
+            <remote-alias>Loan ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Catalog_9A7E583B74BD476B9FDFFF31A968CB42]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ISBN</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[ISBN]</local-name>
+            <parent-name>[Catalog]</parent-name>
+            <remote-alias>ISBN</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Catalog_9A7E583B74BD476B9FDFFF31A968CB42]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Library ID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Library ID]</local-name>
+            <parent-name>[Catalog]</parent-name>
+            <remote-alias>Library ID</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Catalog_9A7E583B74BD476B9FDFFF31A968CB42]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Number of Copies</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Number of Copies]</local-name>
+            <parent-name>[Catalog]</parent-name>
+            <remote-alias>Number of Copies</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Catalog_9A7E583B74BD476B9FDFFF31A968CB42]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Staff Type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Staff Type]</local-name>
+            <parent-name>[LibraryProfile]</parent-name>
+            <remote-alias>Staff Type</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[LibraryProfile_35439564C0354C11ADBFF75827483F0D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Number of Staff</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Number of Staff]</local-name>
+            <parent-name>[LibraryProfile]</parent-name>
+            <remote-alias>Number of Staff</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[LibraryProfile_35439564C0354C11ADBFF75827483F0D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Library</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Library]</local-name>
+            <parent-name>[LibraryProfile]</parent-name>
+            <remote-alias>Library</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[LibraryProfile_35439564C0354C11ADBFF75827483F0D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Library ID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Library ID (LibraryProfile)]</local-name>
+            <parent-name>[LibraryProfile]</parent-name>
+            <remote-alias>Library ID</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[LibraryProfile_35439564C0354C11ADBFF75827483F0D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Consortium Member</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Consortium Member]</local-name>
+            <parent-name>[LibraryProfile]</parent-name>
+            <remote-alias>Consortium Member</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[LibraryProfile_35439564C0354C11ADBFF75827483F0D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Private</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Private]</local-name>
+            <parent-name>[LibraryProfile]</parent-name>
+            <remote-alias>Private</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[LibraryProfile_35439564C0354C11ADBFF75827483F0D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Isbn' datatype='string' name='[ISBN]' role='dimension' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='Catalog' datatype='table' name='[__tableau_internal_object_id__].[Catalog_9A7E583B74BD476B9FDFFF31A968CB42]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='LibraryProfile' datatype='table' name='[__tableau_internal_object_id__].[LibraryProfile_35439564C0354C11ADBFF75827483F0D]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Catalog' id='Catalog_9A7E583B74BD476B9FDFFF31A968CB42'>
+            <properties context=''>
+              <relation connection='excel-direct.133gikm07i6blb1caxsmz17yud87' name='Catalog' table='[Catalog$]' type='table'>
+                <columns gridOrigin='A1:D292:no:A1:D292:0' header='yes' outcome='6'>
+                  <column datatype='string' name='Loan ID' ordinal='0' />
+                  <column datatype='string' name='ISBN' ordinal='1' />
+                  <column datatype='string' name='Library ID' ordinal='2' />
+                  <column datatype='integer' name='Number of Copies' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='LibraryProfile' id='LibraryProfile_35439564C0354C11ADBFF75827483F0D'>
+            <properties context=''>
+              <relation connection='excel-direct.133gikm07i6blb1caxsmz17yud87' name='LibraryProfile' table='[LibraryProfile$]' type='table'>
+                <columns gridOrigin='A1:F19:no:A1:F19:0' header='yes' outcome='6'>
+                  <column datatype='string' name='Staff Type' ordinal='0' />
+                  <column datatype='integer' name='Number of Staff' ordinal='1' />
+                  <column datatype='string' name='Library' ordinal='2' />
+                  <column datatype='string' name='Library ID' ordinal='3' />
+                  <column datatype='string' name='Consortium Member' ordinal='4' />
+                  <column datatype='string' name='Private' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[Library ID]' />
+              <expression op='[Library ID (LibraryProfile)]' />
+            </expression>
+            <first-end-point object-id='Catalog_9A7E583B74BD476B9FDFFF31A968CB42' />
+            <second-end-point object-id='LibraryProfile_35439564C0354C11ADBFF75827483F0D' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{1C534CC9-EDDC-497F-BBE6-CEA5068BDB16}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='51'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{15F9A136-E1FF-4BE1-B9BA-A63F7B7D5814}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='384' name='Sheet 1' width='384'>
+      iVBORw0KGgoAAAANSUhEUgAAAYAAAAGACAYAAACkx7W/AAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAFXUlEQVR4nO3VMQEAIAzAMMC/5yFjRxMF/XpnZg4AOW87AIAdBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEfFxoG/IiMv0YAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
